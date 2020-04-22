@@ -4,7 +4,7 @@ import colors from '~/styles/colors';
 import Input from '~/components/Input';
 import Button from '~/components/Button';
 
-export const Container = styled.View``;
+export const Container = styled.SafeAreaView``;
 
 export const Header = styled.View`
   background-color: ${colors.primary.light};
