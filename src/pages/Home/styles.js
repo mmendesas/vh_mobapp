@@ -4,12 +4,13 @@ import colors from '~/styles/colors';
 import Input from '~/components/Input';
 import Button from '~/components/Button';
 
-export const Container = styled.SafeAreaView``;
+export const Container = styled.View``;
 
 export const Header = styled.View`
   background-color: ${colors.primary.light};
-  height: 230px;
+  height: 280px;
 
+  padding-top: 30px;
   align-items: center;
   justify-content: center;
 `;
