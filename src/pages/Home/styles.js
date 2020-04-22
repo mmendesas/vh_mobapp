@@ -2,6 +2,7 @@ import styled from 'styled-components/native';
 
 import colors from '~/styles/colors';
 import Input from '~/components/Input';
+import Button from '~/components/Button';
 
 export const Container = styled.View``;
 
@@ -14,10 +15,12 @@ export const Header = styled.View`
 `;
 
 export const Title = styled.Text`
-  color: ${colors.white};
+  color: ${(props) =>
+    props.variation === 'primary' ? colors.white : colors.text.base};
   font-size: 22px;
   font-weight: bold;
   margin-top: 20px;
+  padding: 10px 0 0 20px;
 `;
 
 export const FormInput = styled(Input)`
@@ -25,3 +28,12 @@ export const FormInput = styled(Input)`
   margin-left: 20px;
   margin-right: 20px;
 `;
+
+export const FormButton = styled(Button)`
+  margin: 20px;
+`;
+
+export const List = styled.FlatList.attrs({
+  showsHorizontalScrollIndicator: false,
+  contentContainerStyle: { padding: 10 },
+})``;

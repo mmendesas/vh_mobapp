@@ -1,22 +1,40 @@
 import React from 'react';
-import { Image } from 'react-native';
-
-import { Container, Header, Title, FormInput } from './styles';
-
-import Button from '~/components/Button';
+import { Image, View } from 'react-native';
 
 import logo from '~/assets/vh-logo.png';
+import {
+  Container,
+  Header,
+  Title,
+  FormInput,
+  FormButton,
+  List,
+} from './styles';
+
+import Card from '~/components/Card';
+import InfoSection from '~/components/InfoSection';
+
+const data = [1, 2, 3, 4];
 
 export default function Home() {
   return (
     <Container>
       <Header>
         <Image source={logo} alt="logo" width="100px" height="100px" />
-        <Title>Find your dream job abroad</Title>
+        <Title variation="primary">Find your dream job abroad</Title>
         <FormInput icon="search" placeholder="Search Jobs" />
       </Header>
-
-      <Button>simple button</Button>
+      <InfoSection description="Show us your skills and experience so we can match you to the right company" />
+      <View>
+        <Title variation="base">Recommended Jobs</Title>
+        <List
+          horizontal
+          data={data}
+          keyExtractor={(item) => String(item)}
+          renderItem={({ item }) => <Card data={item} />}
+        />
+        <FormButton>SEE ALL JOBS</FormButton>
+      </View>
     </Container>
   );
 }
