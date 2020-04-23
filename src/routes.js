@@ -28,7 +28,7 @@ export default function Routes() {
           name="Home"
           component={Home}
           options={{
-            title: '',
+            title: 'Home',
             tabBarIcon: ({ color }) => (
               <Icon name="dashboard" size={40} color={color} />
             ),
@@ -38,7 +38,7 @@ export default function Routes() {
           name="Search"
           component={Search}
           options={{
-            title: '',
+            title: 'Search',
             tabBarIcon: ({ color }) => (
               <Icon name="search" size={40} color={color} />
             ),
@@ -48,7 +48,7 @@ export default function Routes() {
           name="Favorite"
           component={Favorites}
           options={{
-            title: '',
+            title: 'Favorites',
             tabBarIcon: ({ color }) => (
               <Icon name="favorite-border" size={40} color={color} />
             ),
@@ -58,7 +58,7 @@ export default function Routes() {
           name="Profile"
           component={Profile}
           options={{
-            title: '',
+            title: 'Profile',
             tabBarIcon: ({ color }) => (
               <Icon name="account-circle" size={40} color={color} />
             ),
