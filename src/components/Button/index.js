@@ -1,16 +1,27 @@
 import React from 'react';
 import { ActivityIndicator } from 'react-native';
-import { string, bool } from 'prop-types';
+import { string, bool, oneOf } from 'prop-types';
 
-import { Container, Text } from './styles';
+import { Container, Content, Text, MyIcon } from './styles';
 
-export default function Button({ children, loading, ...props }) {
+export default function Button({
+  children,
+  loading,
+  icon,
+  variation,
+  ...props
+}) {
   return (
-    <Container {...props}>
+    <Container variation={variation} {...props}>
       {loading ? (
         <ActivityIndicator size="small" color="#fff" />
       ) : (
-        <Text>{children}</Text>
+        <Content>
+          {icon && (
+            <MyIcon name={icon} size={28} color="#ccc" variation={variation} />
+          )}
+          <Text variation={variation}>{children}</Text>
+        </Content>
       )}
     </Container>
   );
@@ -18,9 +29,13 @@ export default function Button({ children, loading, ...props }) {
 
 Button.defaultProps = {
   loading: false,
+  variation: 'fill',
+  icon: null,
 };
 
 Button.propTypes = {
+  icon: string,
   children: string.isRequired,
   loading: bool,
+  variation: oneOf(['fill', 'outline']),
 };
