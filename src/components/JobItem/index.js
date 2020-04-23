@@ -1,6 +1,7 @@
 import React from 'react';
-import { bool } from 'prop-types';
+import { bool, shape } from 'prop-types';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   Container,
@@ -14,9 +15,17 @@ import {
   IconButton,
 } from './styles';
 
-export default function JobItem({ liked }) {
+export default function JobItem({ data }) {
+  const { navigate } = useNavigation();
+
+  const { liked } = data;
+
+  function handleClick() {
+    navigate('JobDetails', { data });
+  }
+
   return (
-    <Container>
+    <Container onPress={handleClick}>
       <ImageWrapper>
         <Image source={{ uri: 'http://logo.clearbit.com/google.com' }} />
       </ImageWrapper>
@@ -38,5 +47,7 @@ JobItem.defaultProps = {
 };
 
 JobItem.propTypes = {
-  liked: bool,
+  data: shape({
+    liked: bool,
+  }),
 };

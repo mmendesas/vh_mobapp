@@ -1,6 +1,8 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
+import { useFocusEffect } from '@react-navigation/native';
+
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Text } from 'react-native';
 
 import Input from '~/components/Input';
 import Label from '~/components/Label';
@@ -19,6 +21,12 @@ import {
 const data = [1, 2, 3, 4, 5, 6, 7];
 
 export default function Search() {
+  useFocusEffect(
+    React.useCallback(() => {
+      StatusBar.setBarStyle('dark-content');
+    })
+  );
+
   return (
     <Container>
       <Header>
