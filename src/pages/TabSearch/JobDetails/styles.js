@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
+import colors from '~/styles/colors';
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
   flex: 1;
   padding: 15px;
 
@@ -47,4 +48,18 @@ export const Actions = styled.View`
   padding: 15px;
   flex-direction: row;
   background-color: #f6f8fa;
+`;
+
+export const JobContent = styled.View`
+  padding: 15px;
+`;
+
+export const Title = styled.Text`
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+`;
+
+export const Description = styled.Text`
+  color: #ccc;
 `;

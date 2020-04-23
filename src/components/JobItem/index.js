@@ -32,7 +32,7 @@ export default function JobItem({ data }) {
       <Content>
         <Position>Software Developer</Position>
         <Company>Google</Company>
-        <Country>Winnipeg, CA</Country>
+        <Country>Winnipeg, MB</Country>
         <Since>78% match</Since>
       </Content>
       <IconButton>
@@ -43,7 +43,7 @@ export default function JobItem({ data }) {
 }
 
 JobItem.defaultProps = {
-  liked: false,
+  data: {},
 };
 
 JobItem.propTypes = {

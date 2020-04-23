@@ -1,6 +1,4 @@
 import styled from 'styled-components/native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import colors from '~/styles/colors';
 
 export const Container = styled.SafeAreaView``;
 
@@ -36,4 +34,5 @@ export const List = styled.FlatList.attrs({
 export const Title = styled.Text`
   font-weight: bold;
   font-size: 20px;
+  margin-bottom: 10px;
 `;

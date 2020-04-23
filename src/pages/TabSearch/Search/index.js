@@ -32,7 +32,7 @@ export default function Search() {
       <Header>
         <Input icon="search" placeholder="Search Jobs" />
         <Location>
-          <Label icon="place">Winnipeg, CA</Label>
+          <Label icon="place">Winnipeg, MB</Label>
           <ButtonIcon>
             <Icon name="tune" size={30} color="#777" />
           </ButtonIcon>

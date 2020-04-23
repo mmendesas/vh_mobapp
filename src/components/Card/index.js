@@ -23,7 +23,7 @@ export default function Card() {
         <Image source={{ uri: 'http://logo.clearbit.com/boldcommerce.com' }} />
         <View>
           <Country>Boldcommerce</Country>
-          <City>Winnipeg, CA</City>
+          <City>Winnipeg, MB</City>
         </View>
       </Content>
     </Container>
