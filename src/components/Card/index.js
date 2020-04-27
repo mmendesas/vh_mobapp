@@ -1,6 +1,7 @@
 import React from 'react';
 import { shape, string } from 'prop-types';
 import { View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   Container,
@@ -13,9 +14,16 @@ import {
 } from './styles';
 
 export default function Card({ data }) {
+  const { navigate } = useNavigation();
+
   const { jobType, positionName, city, company } = data;
+
+  function handleClick() {
+    navigate('JobDetails', { data });
+  }
+
   return (
-    <Container>
+    <Container onPress={handleClick}>
       <View>
         <Type>{jobType}</Type>
         <Position>{positionName}</Position>

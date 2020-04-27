@@ -20,8 +20,6 @@ import {
   Title,
 } from './styles';
 
-const data = [1, 2, 3, 4, 5, 6, 7];
-
 export default function Search() {
   const [jobs, setJobs] = useState([]);
 
@@ -51,7 +49,7 @@ export default function Search() {
         </Location>
       </Header>
       <Content>
-        <Title>{data.length} Jobs Found</Title>
+        <Title>{jobs.length} Jobs Found</Title>
         <List
           data={jobs}
           keyExtractor={(item) => String(item)}

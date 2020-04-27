@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Image, View, StatusBar } from 'react-native';
-import { useFocusEffect } from '@react-navigation/native';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
 
 import logo from '~/assets/vh-logo.png';
 import {
@@ -18,6 +18,7 @@ import InfoSection from '~/components/InfoSection';
 import colors from '~/styles/colors';
 
 export default function Home() {
+  const { navigate } = useNavigation();
   const [jobs, setJobs] = useState([]);
 
   useFocusEffect(
@@ -34,12 +35,20 @@ export default function Home() {
     loadData();
   }, []);
 
+  function handleClickSeeAll() {
+    navigate('Search');
+  }
+
   return (
     <Container>
       <Header>
         <Image source={logo} alt="logo" width="100px" height="100px" />
         <Title variation="primary">Find your dream job abroad</Title>
-        <FormInput icon="search" placeholder="Search Jobs" />
+        <FormInput
+          icon="search"
+          placeholder="Search Jobs"
+          onSubmitEditing={handleClickSeeAll}
+        />
       </Header>
       <InfoSection description="Show us your skills and experience so we can match you to the right company" />
       <View>
@@ -50,7 +59,7 @@ export default function Home() {
           keyExtractor={(item) => String(item)}
           renderItem={({ item }) => <Card data={item} />}
         />
-        <FormButton>SEE ALL JOBS</FormButton>
+        <FormButton onPress={handleClickSeeAll}>SEE ALL JOBS</FormButton>
       </View>
     </Container>
   );
