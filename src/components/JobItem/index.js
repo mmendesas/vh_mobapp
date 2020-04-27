@@ -17,8 +17,7 @@ import {
 
 export default function JobItem({ data }) {
   const { navigate } = useNavigation();
-
-  const { liked } = data;
+  const { liked, positionName, company, city, matchPercentage } = data;
 
   function handleClick() {
     navigate('JobDetails', { data });
@@ -27,13 +26,17 @@ export default function JobItem({ data }) {
   return (
     <Container onPress={handleClick}>
       <ImageWrapper>
-        <Image source={{ uri: 'http://logo.clearbit.com/google.com' }} />
+        <Image
+          source={{
+            uri: `http://logo.clearbit.com/${company.toLowerCase()}.com`,
+          }}
+        />
       </ImageWrapper>
       <Content>
-        <Position>Software Developer</Position>
-        <Company>Google</Company>
-        <Country>Winnipeg, MB</Country>
-        <Since>78% match</Since>
+        <Position>{positionName}</Position>
+        <Company>{company}</Company>
+        <Country>{city}</Country>
+        <Since>{matchPercentage}% match</Since>
       </Content>
       <IconButton>
         <Icon name={liked ? 'favorite' : 'favorite-border'} size={25} />

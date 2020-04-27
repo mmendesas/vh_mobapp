@@ -17,8 +17,6 @@ import Card from '~/components/Card';
 import InfoSection from '~/components/InfoSection';
 import colors from '~/styles/colors';
 
-const data = [1, 2, 3, 4];
-
 export default function Home() {
   const [jobs, setJobs] = useState([]);
 

@@ -41,11 +41,24 @@
     },
     {
       "id": 4,
+      "positionName": "Product Manager",
+      "jobType": "fulltime",
+      "city": "New York, NY",
+      "salary": "$60k-$80k (annually)",
+      "company": "Bing",
+      "deadline": "October 2, 2020",
+      "matchPercentage": 5,
+      "liked": false,
+      "applied": false,
+      "description": "If you're a great QA Engineer, please check this position and apply if you have: ↵ ↵ ↵ 4+yrs of professional experience in QA mainly ↵ Code review experience, performing tests and informing the team about bugs ↵ Automating tests implementation ↵ ↵ ↵  Big plus if you have experience with at least 1 programming language, AWS and mobile experience.  ↵ ↵ - Candidates with verified English as 'Advanced' or 'Fluent' will be considered ↵ ↵ ↵ If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! ↵ And if your recommendation is hired, you'll receive $150CAD from VanHack!! ↵ Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral"
+    },
+    {
+      "id": 5,
       "positionName": "Devops Engineer",
       "jobType": "part-time",
       "city": "Toronto",
       "salary": "$72k-$83k (annually)",
-      "company": "Airbnb",
+      "company": "SkipTheDishes",
       "deadline": "June 02, 2021",
       "matchPercentage": 12,
       "liked": false,
@@ -53,7 +66,7 @@
       "description": "Must-have skills:  ↵ - 5+ years of experience working in software development, ideally most of it in a DevOps role. ↵ - Solid experience creating and maintaining AWS infrastructure using CloudFormation and Ansible. ↵ - Proficiency in writing scripts in Python, automating tasks, running database backup, as well as debugging and fixing scripts. ↵ - Solid experience working side by side with a dev team and adding features to improving a product, e.g. improving application logging, Docker containers, CI steps. ↵  ↵  IMPORTANT ↵ - A good score on the  Python  code challenge is desired. ↵ - Candidates with verified English as 'Advanced' or 'Fluent' will be considered ↵ ↵ ↵ If you got a friend who is a good fit for this role and it's not a VanHacker yet, you can recommend him/her to us!! ↵ And if your recommendation is hired, you'll receive $150CAD from VanHack!! ↵ Use this link to get your referral personal link: https://app.vanhack.com/New/#/referral"
     },
     {
-      "id": 5,
+      "id": 6,
       "positionName": "Cyber Security Engineer",
       "jobType": "part-time",
       "city": "Kitchener",
