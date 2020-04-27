@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, View, StatusBar } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 
@@ -12,6 +12,7 @@ import {
   List,
 } from './styles';
 
+import api from '~/services/api';
 import Card from '~/components/Card';
 import InfoSection from '~/components/InfoSection';
 import colors from '~/styles/colors';
@@ -19,11 +20,21 @@ import colors from '~/styles/colors';
 const data = [1, 2, 3, 4];
 
 export default function Home() {
+  const [jobs, setJobs] = useState([]);
+
   useFocusEffect(
     React.useCallback(() => {
       StatusBar.setBarStyle('light-content');
     })
   );
+
+  useEffect(() => {
+    async function loadData() {
+      const response = await api.get('/jobs?_limit=3');
+      setJobs(response.data);
+    }
+    loadData();
+  }, []);
 
   return (
     <Container>
@@ -37,7 +48,7 @@ export default function Home() {
         <Title variation="base">Recommended Jobs</Title>
         <List
           horizontal
-          data={data}
+          data={jobs}
           keyExtractor={(item) => String(item)}
           renderItem={({ item }) => <Card data={item} />}
         />
