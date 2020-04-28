@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { StatusBar } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
+
+import { Form } from '@unform/mobile';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -21,6 +23,7 @@ import {
 } from './styles';
 
 export default function Search() {
+  const formRef = useRef();
   const [jobs, setJobs] = useState([]);
 
   useFocusEffect(
@@ -29,18 +32,32 @@ export default function Search() {
     })
   );
 
+  async function loadData(query = null) {
+    const url = query ? `/jobs?q=${query}` : '/jobs';
+    const response = await api.get(url);
+    setJobs(response.data);
+  }
+
   useEffect(() => {
-    async function loadData() {
-      const response = await api.get('/jobs');
-      setJobs(response.data);
-    }
     loadData();
   }, []);
+
+  function handleSearch(data) {
+    console.tron.log('dataTest', data);
+    // loadData();
+  }
 
   return (
     <Container>
       <Header>
-        <Input icon="search" placeholder="Search Jobs" />
+        <Form ref={formRef} onSubmit={handleSearch}>
+          <Input
+            icon="search"
+            name="search"
+            placeholder="Search Jobs"
+            onSubmitEditing={() => formRef.current.submitForm()}
+          />
+        </Form>
         <Location>
           <Label icon="place">Winnipeg, MB</Label>
           <ButtonIcon>
