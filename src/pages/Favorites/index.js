@@ -1,12 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
 export default function Favorites() {
   return (
-    <View>
-      <Text>Favorites</Text>
-    </View>
+    <Container>
+      <Icon name="block" size={50} color="#ccc" />
+      <Text>Empty List</Text>
+    </Container>
   );
 }
