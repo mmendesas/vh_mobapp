@@ -1,4 +1,14 @@
 {
+  "userInfo": {
+    "id": 1,
+    "name": "Marcio Mendes",
+    "email": "mmendes.as@gmail.com",
+    "positionName": "FrontEnd Software Engineer",
+    "image": "https://avatars1.githubusercontent.com/u/17890831?s=460&u=7894f7fb52a7240ebf0359d9901270eda9b824e8&v=4",
+    "github": "https://github.com/mmendesas/",
+    "linkedin": "https://www.linkedin.com/in/mmendesas/",
+    "about": "I am a Frontend Developer with more than 3 years of experience working with Reactjs. In the last few years, I have worked in the e-commerce field, solving problems for thousands of users. I do a lot of side projects that help me to increase my skills and prove some new concepts. I am always looking for new technological challenges and building something for self-learning."
+  },
   "jobs": [
     {
       "id": 1,

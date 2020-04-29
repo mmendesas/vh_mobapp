@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import CIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from '~/pages/Home';
@@ -60,7 +61,7 @@ export default function Routes() {
         options={{
           title: 'Profile',
           tabBarIcon: ({ color }) => (
-            <Icon name="account-circle" size={40} color={color} />
+            <CIcon name="account" size={40} color={color} />
           ),
         }}
       />
