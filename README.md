@@ -1,8 +1,18 @@
-# VH - mobile
+<div align="center">
+  <img alt="logo" title="vanhack" src=".github/assets/vh-blue.png" width="300px" />
+</div>
+
+<h4 align="center">
+   Find your dream job abroad
+</h4>
 
 ## Getting Started
 
-This project was developed as a proposal for a mobile app. So this is just a proof of concept.
+This project was developed as a **`proposal`** for a mobile app. So this is just a POC (proof of concept).
+
+I think this project can be used for true `open source` collaboration, so together we can learn and use it in practice.
+
+> this project is still under development ...
 
 ## How to test this implementation
 
